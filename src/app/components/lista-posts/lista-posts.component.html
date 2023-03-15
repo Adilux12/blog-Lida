@@ -1,1 +1,18 @@
-<p>lista-posts works!</p>
+<div>
+    <select (change)="onChange($event)">
+        <option value="todos">Selecciona todos</option>
+        <option value="Comida">Comida</option>
+        <option value="Tutorial">Tutorial</option>
+    </select>
+</div>
+<div class="posts">
+    <div class="post" *ngFor="let post of posts">
+        <h3>{{post.titulo}}</h3>
+        <img [src]="post.imagen" alt="">
+        <p>Category: {{post.categoria}}</p>
+        <p>Published by: {{post.autor}}</p>
+        <cite>
+            <small>{{post.fecha | date}}</small>
+        </cite>
+    </div>
+</div>
