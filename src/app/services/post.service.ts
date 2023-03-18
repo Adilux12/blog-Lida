@@ -32,7 +32,7 @@ export class PostService {
     return this.arrPosts;
   }
 
-  create(pPost: any) {
+  create(pPost: Post) {
     this.arrPosts.push(pPost);
   }
 
