@@ -22,7 +22,7 @@ export class PostService {
         autor: 'Lida',
         imagen: 'https://www.uplers.com/wp-content/uploads/2022/05/AngularJs-Frameworks-891x505.jpg',
         fecha: new Date(22 / 3 / 2022),
-        categoria: "Tutorial"
+        categoria: "Informatica"
       }
     ]
   }
