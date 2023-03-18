@@ -1,31 +1,35 @@
 <p>formulario works!</p>
-<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
-    <div class="mb-3">
-        <label class="form-label">Name</label>
-        <input type="text" class="form-control" formControlName="titulo">
-    </div>
-    <div class="mb-3">
-        <label class="form-labelf">Description</label>
-        <textarea type="text" class="form-control" formControlName="texto"> </textarea>
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Autor</label>
-        <input type="text" class="form-control" formControlName="autor">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Insert image url</label>
-        <input type="text" class="form-control" formControlName="imagen">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Date</label>
-        <input type="date" class="form-control" formControlName="fecha">
-    </div>
-    <div class="mb-3">
-        <select formControlName="categoria">
-            <option value="">Selecciona una categoria</option>
-            <option value="Comida">Comida</option>
-            <option value="Informatica">Informatica</option>
-        </select>
-    </div>
-    <input type="submit" value="Create" class="bg bg-primary">
-</form>
+<div class="form">
+    <form class=" col-lg-4 offset-lg-4 offset-p col-sm-8 offset-sm-2" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" formControlName="titulo">
+        </div>
+        <div class="mb-3">
+            <label class="form-labelf">Description</label>
+            <textarea type="text" class="form-control" formControlName="texto"> </textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Autor</label>
+            <input type="text" class="form-control" formControlName="autor">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Insert image url</label>
+            <input type="text" class="form-control" formControlName="imagen">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Date</label>
+            <input type="date" class="form-control" formControlName="fecha">
+        </div>
+        <div class="mb-3">
+            <select formControlName="categoria">
+                <option value="">Selecciona una categoria</option>
+                <option value="Comida">Comida</option>
+                <option value="Informatica">Informatica</option>
+            </select>
+        </div>
+        <input type="submit" value="Create" class="bg bg-primary">
+
+    </form>
+    <div>
