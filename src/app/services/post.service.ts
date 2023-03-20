@@ -12,7 +12,7 @@ export class PostService {
         titulo: 'Hamburguesa Delicioso',
         texto: 'Receta hamburguesa',
         autor: 'Lida',
-        imagen: 'https://img.freepik.com/fotos-premium/hamburguesa-deliciosa-casera-fresca-bollo-espinacas-aislado-blanco_147620-1711.jpg',
+        imagen: 'https://cdn.pixabay.com/photo/2017/02/09/14/01/kebab-2052339_960_720.jpg',
         fecha: new Date(22 / 3 / 2022),
         categoria: "Comida"
       },

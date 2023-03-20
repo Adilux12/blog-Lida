@@ -7,3 +7,31 @@ form {
 .form {
     margin: 1em;
 }
+
+.error {
+    color: rgba(177, 19, 19, 0.74);
+}
+
+input.ng-valid.ng-touched {
+    border-color: greenyellow;
+}
+
+input.ng-invalid.ng-touched {
+    border-color: lightcoral;
+}
+
+textarea.ng-invalid.ng-touched {
+    border-color: lightcoral;
+}
+
+textarea.ng-valid.ng-touched {
+    border-color: greenyellow;
+}
+
+select.ng-invalid.ng-touched {
+    border-color: lightcoral;
+}
+
+select.ng-valid.ng-touched {
+    border-color: greenyellow;
+}
