@@ -1,9 +1,3 @@
-<p>formulario works!</p>
-<div>
-    <p>Formulario Valid: {{formulario.valid}}</p>
-    <p>Nombre valid: {{formulario.get('titulo')?.valid}}</p>
-</div>
-
 <div class="form">
     <form class=" col-lg-4 offset-lg-4 offset-p col-sm-8 offset-sm-2" [formGroup]="formulario" (ngSubmit)="onSubmit()">
 
@@ -53,7 +47,7 @@
         </div>
         <div class="mb-3">
             <label class="form-label ">Categoria</label>
-            <select formControlName="categoria" class="ms-3">
+            <select class="form-control" formControlName="categoria" class="ms-3">
                 <option value="">Selecciona una categoria</option>
                 <option value="Comida">Comida</option>
                 <option value="Informatica">Informatica</option>

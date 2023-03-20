@@ -25,6 +25,9 @@ export class PostService {
         categoria: "Informatica"
       }
     ]
+    if (localStorage.getItem('arrPosts')) {
+      this.arrPosts = JSON.parse(localStorage.getItem('arrPosts')!);
+    }
   }
 
 
@@ -34,6 +37,8 @@ export class PostService {
 
   create(pPost: Post) {
     this.arrPosts.push(pPost);
+    //Guardo las publicaciones en LS
+    localStorage.setItem('arrPosts', JSON.stringify(this.arrPosts));
   }
 
   getByCategory(category: string) {
