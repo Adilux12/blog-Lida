@@ -1,1 +1,62 @@
-<p>formulario works!</p>
+<div class="form">
+    <form class=" col-lg-4 offset-lg-4 offset-p col-sm-8 offset-sm-2" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" formControlName="titulo">
+
+            <p class="error" *ngIf="checkError('titulo','required')">El
+                campo titulo es requerido</p>
+
+            <p class="error" *ngIf="checkError('titulo', 'minlength')">El campo titulo debe contener 4 cuatro caracteres
+            </p>
+        </div>
+        <div class="mb-3">
+            <label class="form-labelf">Description</label>
+            <textarea type="text" class="form-control" formControlName="texto"> </textarea>
+
+            <p class="error" *ngIf="checkError('texto','required')">El
+                campo description es requerido</p>
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Autor</label>
+            <input type="text" class="form-control" formControlName="autor">
+
+            <p class="error" *ngIf="checkError('autor','required')">El
+                campo autor es requerido</p>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Insert image url</label>
+            <input type="text" class="form-control" formControlName="imagen">
+
+
+            <p class="error" *ngIf="checkError('imagen','required')">El
+                campo image es requerido</p>
+            <p class="error" *ngIf="checkError('imagen', 'pattern')">
+                El url no es válido deber comenzar por "http://" o "https://" y termina con una extensión de archive
+                ".jpg", ".gif" o ".png".
+            </p>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Date</label>
+            <input type="date" class="form-control" formControlName="fecha">
+
+            <p class="error" *ngIf="checkError('fecha','required')">El
+                campo date es requerido</p>
+        </div>
+        <div class="mb-3">
+            <label class="form-label ">Categoria</label>
+            <select class="form-control" formControlName="categoria" class="ms-3">
+                <option value="">Selecciona una categoria</option>
+                <option value="Comida">Comida</option>
+                <option value="Informatica">Informatica</option>
+            </select>
+
+            <p class="error" *ngIf="checkError('categoria','required')">El
+                campo categoria es requerido</p>
+        </div>
+        <input type="submit" value="Create" class="bg bg-primary" [disabled]="!formulario.valid">
+
+    </form>
+    <div>
