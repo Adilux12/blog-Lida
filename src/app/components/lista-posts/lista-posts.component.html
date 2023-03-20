@@ -9,6 +9,9 @@
     <div class="post" *ngFor="let post of posts">
         <h3>{{post.titulo}}</h3>
         <img [src]="post.imagen" alt="">
+        <div>
+            <p>Description: {{post.texto}}</p>
+        </div>
         <p>Category: {{post.categoria}}</p>
         <p>Published by: {{post.autor}}</p>
         <cite>
